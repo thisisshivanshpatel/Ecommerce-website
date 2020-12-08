@@ -82,6 +82,19 @@
 {
     margin: 4vw;
 }
+
+#slider
+{
+    height:280px;
+    width: 100%;
+    /*
+    left: 50%;
+    min-width:1600px;
+    position:absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    */
+}
     </style>
 </head>
 <body bgcolor="grey">
@@ -103,5 +116,58 @@
 </center>
 </div>
 
+<div style="margin-top: 1vw;">
+    <img id="slider" src="Images/Banner.jpg" />
+  
+    <button onclick="prev()" style="margin-left: 0%;" class="submit"> Prev </button>
+    <button onclick="next()" style="float: right;" class="submit"> Next </button>
+  
+</div>
+
+<script>
+    var images = [
+    'Images/Banner.jpg', 
+    'Images/banner2.jpg', 
+    'Images/Banner3.jpg',
+    'Images/banner6.jpg',
+];
+
+var myVar = setInterval(next, 5000);
+
+
+/*var timeLeft = 5;
+    var elem;
+    
+    var timerId = setInterval(countdown, 5000);
+    
+    function countdown() {
+      if (timeLeft == 0) {
+      //  clearTimeout(timerId);
+        next();
+      } else {
+    
+        timeLeft--;
+             }
+    } */
+ 
+
+var num = 0;
+function next() {
+    var slider = document.getElementById('slider');
+    num++;
+    if(num >= images.length) {
+        num = 0;
+    }
+    slider.src = images[num];
+}
+function prev() {
+    var slider = document.getElementById('slider');
+    num--;
+    if(num < 0) {
+        num = images.length-1;
+    }
+    slider.src = images[num];
+}
+</script>
 </body>
 </html>
