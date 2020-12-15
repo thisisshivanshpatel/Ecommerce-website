@@ -12,13 +12,14 @@
      body
      { 
         margin: 0%;
+        background-color: #d6d6d6;
      }
        
      input[type=text] {
   width: 40%;
   padding: 12px 20px;
 /*  margin: 3vw; */
-  margin-left: 30px;
+  margin-left: 210px;
   margin-top:1vw;
   box-sizing: border-box;
   border: solid 2px white;
@@ -30,7 +31,7 @@
         .navigation
         {
             width: 100vw;
-            height: 10vw;
+            height: 7vw;
             background-color:dodgerblue;
             
             position: -webkit-sticky; /* Safari */
@@ -97,15 +98,15 @@
 }
     </style>
 </head>
-<body bgcolor="#aaa9ad">
+<body>
     <nav class="navigation">
-    <br> 
+
    <img src="Images/shopping-cart_icon-icons.com_60593.png"  height="50px" width="50px">
     <span class="name">imall</span>
    
     <input type="text" placeholder="search for products,Brands and more">
     <input type="button" value="Login" class="submit">
-    <img src="Images/10-2-cart-png-pic.png" alt="cart" style="margin-left: 23vw; padding-top:10px;" height="50px" width="50px">
+    <img src="Images/10-2-cart-png-pic.png" alt="cart" style="margin-left: 17vw; padding-top:10px;" height="50px" width="50px">
     <span class="name">cart</span>        
 </nav>
 
@@ -118,10 +119,10 @@
 
 <div style="margin-top: 1vw;">
     <img id="slider" src="Images/Banner.jpg" />
-  
+  <!--
     <button onclick="prev()" style="margin-left: 0%;" class="submit"> Prev </button>
     <button onclick="next()" style="float: right;" class="submit"> Next </button>
-  
+  -->
 </div>
 
 <script>
@@ -130,6 +131,7 @@
     'Images/banner2.jpg', 
     'Images/Banner3.jpg',
     'Images/banner6.jpg',
+    'Images/Banner7.jpg',
 ];
 
 var myVar = setInterval(next, 5000);
