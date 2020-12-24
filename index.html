@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<link rel="icon" href="Images/shopping-cart_icon-icons.com_60593.png">
-<link rel="stylesheet" href="CSS/support.min.css">
+    <link rel="icon" href="Images/shopping-cart_icon-icons.com_60593.png">
+    <link rel="stylesheet" href="CSS/support.min.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,292 +12,391 @@
 
 
     <style>
-     body
-     { 
-        margin: 0%;
-        background-color: #d6d6d6;
-        overflow-x: hidden;
-     }
-       
-     input[type=text] {
-  width: 40%;
-  padding: 12px 20px;
-/*  margin: 3vw; */
-  margin-left: 210px;
-  margin-top:1vw;
-  box-sizing: border-box;
-  border: solid 2px white;
-  border-radius: 15px;
- -moz-border-radius: 15px;
-  outline: none;
-}
+        body {
+            margin: 0%;
+            background-color: #d6d6d6;
+            overflow-x: hidden;
+        }
 
-        .navigation
-        {
-            width: 100vw;
+        input[type=text] {
+            width: 40%;
+            padding: 12px 20px;
+            /*  margin: 3vw; */
+            margin-left: 210px;
+            margin-top: 1vw;
+            box-sizing: border-box;
+            border: solid 2px white;
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            outline: none;
+        }
+
+        .navigation {
+            width: 100%;
             height: 7vw;
-            background-color:dodgerblue;
-            
-            position: -webkit-sticky; /* Safari */
+            background-color: dodgerblue;
+
+            position: -webkit-sticky;
+            /* Safari */
             position: sticky;
             z-index: 3;
             top: 0;
         }
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap');
 
-:root{
-    --main-bg-color:brown;
-    --font1:'Baloo Bhaina 2', cursive;
-    --font2:'Roboto',sans-serif;
-}
-        .name
-        {
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap');
+
+        :root {
+            --main-bg-color: brown;
+            --font1: 'Baloo Bhaina 2', cursive;
+            --font2: 'Roboto', sans-serif;
+        }
+
+        .name {
             font-family: var(--font1);
-            font-weight:bolder;
-            color:white;
+            font-weight: bolder;
+            color: white;
         }
 
 
         .submit {
-    background-color:white;
-    padding: 8px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    color:royalblue;
-    border: none;
-    outline: none;
-    margin-left:5vw;
-    font-family: var(--font1);
-    font-size:small;
-    font-weight:bolder;
-}
-.submit:hover {
-    background-color:rgb(226, 248, 30);
-}
-.categories
-{
-    background-color:white;
-    width: 100vw;
-    height:4vw;
-    font-family: var(--font1);
-    font-weight:bolder;
-}
+            background-color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: royalblue;
+            border: none;
+            outline: none;
+            margin-left: 5vw;
+            font-family: var(--font1);
+            font-size: small;
+            font-weight: bolder;
+        }
 
-.margS
-{
-    margin: 4vw;
-}
+        .submit:hover {
+            background-color: rgb(226, 248, 30);
+        }
 
-#slider
-{
-    height:280px;
-    width: 100%;
-    /*
+        .categories {
+            background-color: white;
+            width: 100%;
+            height: 4vw;
+            font-family: var(--font1);
+            font-weight: bolder;
+        }
+
+        .margS {
+            margin: 4vw;
+        }
+
+        #slider {
+            height: 280px;
+            width: 100%;
+            /*
     left: 50%;
     min-width:1600px;
     position:absolute;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     */
-}
+        }
 
-.lscontainer
-{
-    margin-top: 10px;
+        .cart 
+       {
+        margin-left: 17vw;
+        margin-top:9px;
+        height: 50px;
+        width: 50px;
+       }
+
+        .lscontainer {
+            margin-top: 10px;
+            background-color: white;
+            display: flex;
+            flex-wrap: nowrap;
+
+            justify-content: space-between;
+            /*  align-items: stretch; */
+            /*  flex-shrink: 3; */
+            /*  flex-basis: 320px; */
+        }
+
+        .lscontainer img {
+            height: 200px;
+            width: 250px;
+        }
+
+        figure {
+            z-index: 2;
+        }
+
+        figcaption {
+            font-size: 25px;
+        }
+
+        footer {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        footer a {
+            text-decoration: none;
+            padding: 40px;
+            text-align: center;
+            float: left;
+            color: white;
+        }
+/* -------------------------------------------------------------------------*/
+        @media (max-width:1120px) {
+            input[type=text] {
+                width: 40%;
+                padding: 6px 8px;
+                margin-left: 30px;
+
+                box-sizing: border-box;
+                border: solid 2px white;
+                border-radius: 15px;
+                -moz-border-radius: 15px;
+                outline: none;
+            }
+
+            .navigation {
+                width: 100%;
+                height: 55px;
+                background-color: dodgerblue;
+
+                position: -webkit-sticky;
+                /* Safari */
+                position: sticky;
+                z-index: 3;
+                top: 0;
+            }
+
+            .submit {
     background-color:white;
-    display:flex;
-    flex-wrap: wrap;
-
-    justify-content: space-between;
-  /*  align-items: stretch; */
-  /*  flex-shrink: 3; */
-  /*  flex-basis: 320px; */
+    padding: 4px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color:royalblue;
+    border: none;
+    outline: none;
+    margin-left:20px;
+    font-family: var(--font1);
+    font-size:small;
+    font-weight:bolder;
 }
+
+.categories
+{
+    background-color:white;
+    width: 100%;
+    height:40px;
+    font-family: var(--font1);
+    font-weight:bolder;
+}
+
+.margS
+{
+	margin-right:6px;
+}
+#slider
+{
+    height:130px;
+    width: 100%;
+}
+
 .lscontainer img
 {
-    height: 200px;
-    width: 250px;
-}
-
-figure
-{
-    z-index: 2;
+    height: 65px;
+    width: 75px;
 }
 
 figcaption
 {
-    font-size: 25px;
+	 font-weight:bold;
+    font-size:4px;
+}
+
+.ims
+{
+    height: 30px;
+    width: 30px;
 }
 
 footer {
     background-color: #333;
     overflow: hidden;
+    display:flex;
+    flex-wrap:wrap;
 }
 
 footer a {
     text-decoration: none;
-    padding: 40px;
-    text-align: center;
+    font-size:10px;
+    padding: 25px;
+    
     float: left;
     color: white;
 }
 
 
 
+        }
+
     </style>
 </head>
+
 <body>
     <nav class="navigation">
 
-   <img src="Images/shopping-cart_icon-icons.com_60593.png"  height="50px" width="50px">
-    <span class="name">imall</span>
-   
-    <input type="text" placeholder="search for products,Brands and more">
-    <input type="button" value="Login" class="submit" onclick="login()">
-    <img src="Images/10-2-cart-png-pic.png" alt="cart" style="margin-left: 17vw; padding-top:10px;" height="50px" width="50px">
-    <span class="name">cart</span>        
-</nav>
+        <img src="Images/shopping-cart_icon-icons.com_60593.png" class="ims" height="50px" width="50px">
+        <span class="name">imall</span>
 
-<div class="categories">
-<center style="padding:10px;">
-<span class="margS">Mobile</span> <span class="margS">Electronics</span> <span class="margS">Mens</span> <span class="margS">womens</span>
-<span class="margS">Sports</span><span class="margS">Furniture</span>
-</center>
-</div>
+        <input type="text" placeholder="search for products,Brands and more">
+        <input type="button" value="Login" class="submit" onclick="login()">
+        <img src="Images/10-2-cart-png-pic.png" alt="cart" class="cart">
+    </nav>
 
-<div style="margin-top: 1vw;">
-    <img id="slider" src="Images/Banner.jpg" />
-  <!--
+    <div class="categories">
+        <center style="padding:10px;">
+            <span class="margS">Mobile</span> <span class="margS">Electronics</span> <span class="margS">Mens</span>
+            <span class="margS">womens</span>
+            <span class="margS">Sports</span><span class="margS">Furniture</span>
+        </center>
+    </div>
+
+    <div style="margin-top: 1vw;">
+        <img id="slider" src="Images/Banner.jpg" />
+        <!--
     <button onclick="prev()" style="margin-left: 0%;" class="submit"> Prev </button>
     <button onclick="next()" style="float: right;" class="submit"> Next </button>
   -->
-</div>
+    </div>
 
-<div class="lscontainer">
-<figure class="imghvr-push-left">
-    <img src="Images/DolbyAudio.jpeg">
-    <figcaption>
-    Dolbyy Audio speakers<br>
-    available at 30% discount
-    </figcaption>
-    <a href="https://www.flipkart.com/search?q=dolby+atmos+soundbar&sid=0pm%2C0o7&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_6_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_6_na_na_na&as-pos=1&as-type=RECENT&suggestionId=dolby+atmos+soundbar%7CSpeakers&requestId=a8b46f75-fc61-45fc-ade7-ced6a0dd3e2a&as-searchtext=dolby%20"></a>
-</figure>
+    <div class="lscontainer">
+        <figure class="imghvr-push-left">
+            <img src="Images/DolbyAudio.jpeg">
+            <figcaption>
+                Dolbyy Audio speakers<br>
+                available at 30% discount
+            </figcaption>
+            <a
+                href="https://www.flipkart.com/search?q=dolby+atmos+soundbar&sid=0pm%2C0o7&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_6_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_6_na_na_na&as-pos=1&as-type=RECENT&suggestionId=dolby+atmos+soundbar%7CSpeakers&requestId=a8b46f75-fc61-45fc-ade7-ced6a0dd3e2a&as-searchtext=dolby%20"></a>
+        </figure>
 
-<figure class="imghvr-push-left">
-    <img src="Images/wallClocks.jpeg">
-    <figcaption>
-    Wall clocks<br>
-    available at 75% discount
-    </figcaption>
-    <a href="#"></a>
-</figure>
-
-
-<figure class="imghvr-push-left">
-    <img src="Images/keychain.jpeg">
-    <figcaption>
-    keychain<br>
-    available at 45% discount
-    </figcaption>
-    <a href="#"></a>
-</figure>
+        <figure class="imghvr-push-left">
+            <img src="Images/wallClocks.jpeg">
+            <figcaption>
+                Wall clocks<br>
+                available at 75% discount
+            </figcaption>
+            <a href="#"></a>
+        </figure>
 
 
-<figure class="imghvr-push-left">
-    <img src="Images/shoes.jpeg">
-    <figcaption>
-    shoes<br>
-    available at 45% discount
-    </figcaption>
-    <a href="#"></a>
-</figure>
+        <figure class="imghvr-push-left">
+            <img src="Images/keychain.jpeg">
+            <figcaption>
+                keychain<br>
+                available at 45% discount
+            </figcaption>
+            <a href="#"></a>
+        </figure>
 
 
-</div>
+        <figure class="imghvr-push-left">
+            <img src="Images/shoes.jpeg">
+            <figcaption>
+                shoes<br>
+                available at 45% discount
+            </figcaption>
+            <a href="#"></a>
+        </figure>
 
 
-<div class="lscontainer">
-    <figure class="imghvr-push-left">
-        <img src="Images/monitor2.jpeg">
-        <figcaption>
-        Monitors<br>
-        available at 20% discount
-        </figcaption>
-        <a href="#"></a>
-    </figure>
-    
-    <figure class="imghvr-push-left">
-        <img src="Images/washing machine.jpeg">
-        <figcaption>
-        Washing machine<br>
-        available at 55% discount
-        </figcaption>
-        <a href="#"></a>
-    </figure>
-    
-    
-    <figure class="imghvr-push-left">
-        <img src="Images/x box.jpeg">
-        <figcaption>
-        X Box <br>
-        exclusively available on imall
-        </figcaption>
-        <a href="#"></a>
-    </figure>
-    
-    
-    <figure class="imghvr-push-left">
-        <img src="Images/book.jpeg">
-        <figcaption>
-        Books and Novels<br>
-        available at 55% discount
-        </figcaption>
-        <a href="#"></a>
-    </figure>
-    
-    
+    </div>
+
+    <div class="lscontainer">
+        <figure class="imghvr-push-left">
+            <img src="Images/monitor2.jpeg">
+            <figcaption>
+                Monitors<br>
+                available at 20% discount
+            </figcaption>
+            <a href="#"></a>
+        </figure>
+
+        <figure class="imghvr-push-left">
+            <img src="Images/washing machine.jpeg">
+            <figcaption>
+                Washing machine<br>
+                available at 55% discount
+            </figcaption>
+            <a href="#"></a>
+        </figure>
+
+
+        <figure class="imghvr-push-left">
+            <img src="Images/x box.jpeg">
+            <figcaption>
+                X Box <br>
+                exclusively available on imall
+            </figcaption>
+            <a href="#"></a>
+        </figure>
+
+
+        <figure class="imghvr-push-left">
+            <img src="Images/book.jpeg">
+            <figcaption>
+                Books and Novels<br>
+                available at 55% discount
+            </figcaption>
+            <a href="#"></a>
+        </figure>
+
+
     </div>
 
     
-<div class="lscontainer">
-    <figure class="imghvr-push-left">
-        <img src="Images/Tab.jpeg">
-        <figcaption>
-        samsung Galaxy Tabs<br>
-        starting from 9000
-        </figcaption>
-        <a href="#"></a>
-    </figure>
-    
-    <figure class="imghvr-push-left">
-        <img src="Images/mixer.jpeg">
-        <figcaption>
-        Mixers and juicers<br>
-        available at 55% discount
-        </figcaption>
-        <a href="#"></a>
-    </figure>
-    
-    
-    <figure class="imghvr-push-left">
-        <img src="Images/vaccum.jpeg">
-        <figcaption>
-        Robotic vaccum cleaner <br>
-        exclusively available on imall
-        </figcaption>
-        <a href="#"></a>
-    </figure>
-    
-    
-    <figure class="imghvr-push-left">
-        <img src="Images/camera.jpeg">
-        <figcaption>
-        Cameras<br>
-        available at 25% discount
-        </figcaption>
-        <a href="#"></a>
-    </figure>
+    <div class="lscontainer">
+        <figure class="imghvr-push-left">
+            <img src="Images/Tab.jpeg">
+            <figcaption>
+                samsung Galaxy Tabs<br>
+                starting from 9000
+            </figcaption>
+            <a href="#"></a>
+        </figure>
+
+        <figure class="imghvr-push-left">
+            <img src="Images/mixer.jpeg">
+            <figcaption>
+                Mixers and juicers<br>
+                available at 55% discount
+            </figcaption>
+            <a href="#"></a>
+        </figure>
+
+
+        <figure class="imghvr-push-left">
+            <img src="Images/vaccum.jpeg">
+            <figcaption>
+                Robotic vaccum cleaner <br>
+                exclusively available on imall
+            </figcaption>
+            <a href="#"></a>
+        </figure>
+
+
+        <figure class="imghvr-push-left">
+            <img src="Images/camera.jpeg">
+            <figcaption>
+                Cameras<br>
+                available at 25% discount
+            </figcaption>
+            <a href="#"></a>
+        </figure>
 
     </div>
 
@@ -313,39 +413,39 @@ footer a {
     </footer>
 
 
-<script>
-    var images = [
-    'Images/Banner.jpg', 
-    'Images/banner2.jpg', 
-    'Images/Banner3.jpg',
-    'Images/banner6.jpg',
-    'Images/Banner7.jpg',
-];
+    <script>
+        var images = [
+            'Images/Banner.jpg',
+            'Images/banner2.jpg',
+            'Images/Banner3.jpg',
+            'Images/banner6.jpg',
+            'Images/Banner7.jpg',
+        ];
 
-var myVar = setInterval(next, 5000);
+        var myVar = setInterval(next, 5000);
 
-var num = 0;
-function next() {
-    var slider = document.getElementById('slider');
-    num++;
-    if(num >= images.length) {
-        num = 0;
-    }
-    slider.src = images[num];
-}
-function prev() {
-    var slider = document.getElementById('slider');
-    num--;
-    if(num < 0) {
-        num = images.length-1;
-    }
-    slider.src = images[num];
-}
+        var num = 0;
+        function next() {
+            var slider = document.getElementById('slider');
+            num++;
+            if (num >= images.length) {
+                num = 0;
+            }
+            slider.src = images[num];
+        }
+        function prev() {
+            var slider = document.getElementById('slider');
+            num--;
+            if (num < 0) {
+                num = images.length - 1;
+            }
+            slider.src = images[num];
+        }
 
-function login()
-{
-  window.open("login.html");
-}
-</script>
+        function login() {
+            window.open("login.html");
+        }
+    </script>
 </body>
+
 </html>
