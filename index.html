@@ -5,13 +5,13 @@
 
     <link rel="icon" href="Images/shopping-cart_icon-icons.com_60593.png">
     <link rel="stylesheet" href="CSS/support.min.css">
-    
-<meta charset="utf-8">
-<meta name="application-name" content="imall">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="author" content="shivansh patel">
-<meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta charset="utf-8">
+    <meta name="application-name" content="imall">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="author" content="shivansh patel">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
 
     <title>imall</title>
@@ -64,6 +64,33 @@
             color: white;
         }
 
+        .header {
+            position: -webkit-sticky;
+            /* Safari */
+            position: sticky;
+            z-index: 3;
+            top: 0;
+        }
+
+
+        input[type=text] {
+            width: 40%;
+            padding: 6px 10px;
+            /*  margin: 3vw; */
+    
+            margin-top: 1vw;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: solid 2px white;
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            outline: none;
+        }
+
+        .timg {
+            height: 50px;
+            width: 50px;
+        }
 
         .submit {
             background-color: white;
@@ -73,7 +100,7 @@
             color: royalblue;
             border: none;
             outline: none;
-            margin-left: 5vw;
+            
             font-family: var(--font1);
             font-size: small;
             font-weight: bolder;
@@ -105,13 +132,6 @@
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     */
-        }
-
-        .cart {
-            margin-left: 17vw;
-            margin-top: 9px;
-            height: 50px;
-            width: 50px;
         }
 
         .lscontainer {
@@ -154,43 +174,32 @@
 
         /* -------------------------------------------------------------------------*/
         @media (max-width:1120px) {
+
             input[type=text] {
-                width: 40%;
-                padding: 6px 8px;
-                margin-left: 30px;
+  width: 40%;
+  padding: 6px 8px;
+  margin-left: 20px;
+  
+  box-sizing: border-box;
+  border: solid 2px white;
+  border-radius: 15px;
+ -moz-border-radius: 15px;
+  outline: none;
+}
 
-                box-sizing: border-box;
-                border: solid 2px white;
-                border-radius: 15px;
-                -moz-border-radius: 15px;
-                outline: none;
-            }
-
-            .navigation {
-                width: 100%;
-                height: 55px;
-                background-color: dodgerblue;
-
-                position: -webkit-sticky;
-                /* Safari */
-                position: sticky;
-                z-index: 3;
-                top: 0;
-            }
-
-            .submit {
-                background-color: white;
-                padding: 4px 10px;
-                border-radius: 5px;
-                cursor: pointer;
-                color: royalblue;
-                border: none;
-                outline: none;
-                margin-left: 20px;
-                font-family: var(--font1);
-                font-size: small;
-                font-weight: bolder;
-            }
+.submit {
+    background-color:white;
+    padding: 4px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color:royalblue;
+    border: none;
+    outline: none;
+    margin-left:10px;
+    font-family: var(--font1);
+    font-size:small;
+    font-weight:bolder;
+}
 
             .categories {
                 background-color: white;
@@ -198,13 +207,6 @@
                 height: 40px;
                 font-family: var(--font1);
                 font-weight: bolder;
-            }
-
-            .cart {
-                float: right;
-                margin-top: 6px;
-                height: 30px;
-                width: 30px;
             }
 
             .margS {
@@ -226,7 +228,7 @@
                 font-size: 4px;
             }
 
-            .ims {
+            .timg {
                 height: 30px;
                 width: 30px;
             }
@@ -253,24 +255,27 @@
 </head>
 
 <body>
-    <nav class="navigation">
+    <table border="0" width="100%" bgcolor="#2874F0" class="header">
 
-        <img src="Images/shopping-cart_icon-icons.com_60593.png" class="ims" height="50px" width="50px">
-        <span class="name">imall</span>
+        <tr>
+            <td align="right"><img class="timg" src="Images/shopping-cart_icon-icons.com_60593.png"></td>
+            <th class="name">imall</th>
+            <td><input type="text" placeholder="Search for products, brands and more"></td>
+            <th> <input type="button" value="Login" class="submit" onclick="login()"></th>
+            <th><img class="timg" src="Images/10-2-cart-png-pic.png"></th>
+        </tr>
+    </table>
 
-        <input type="text" placeholder="search for products,Brands and more">
-        <input type="button" value="Login" class="submit" onclick="login()">
-        <img src="Images/10-2-cart-png-pic.png" alt="cart" class="cart">
-    </nav>
-
-    <div class="categories">
-        <center style="padding:10px;">
-            <span class="margS">Mobile</span> <span class="margS">Electronics</span> <span class="margS">Mens</span>
-            <span class="margS">womens</span>
-            <span class="margS">Sports</span><span class="margS">Furniture</span>
-        </center>
-    </div>
-
+    <table border="0" width="100%" bgcolor="white" height="45px">
+        <tr>
+        <th width="12.5%">Electronics</th>
+        <th width="12.5%">Sports</th>
+        <th width="12.5%">Men</th>
+        <th width="12.5%">Women</th>
+        <th width="12.5%">Home & Furniture</th>
+        </tr>
+        </table>
+        
     <div style="margin-top: 1vw;">
         <img id="slider" src="Images/Banner.jpg" />
         <!--
